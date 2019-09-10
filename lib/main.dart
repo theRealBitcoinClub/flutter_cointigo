@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
       title: 'CoinTigo',
       theme: ThemeData(
         primarySwatch:
-            Colors.green, // Define the default brightness and colors.
+            Colors.deepPurple, // Define the default brightness and colors.
         brightness: Brightness.dark,
-        primaryColor: Colors.lightGreen[800],
-        accentColor: Colors.lightGreen[600],
+        primaryColor: Colors.deepPurple[800],
+        accentColor: Colors.deepPurpleAccent[600],
         fontFamily: 'Montserrat',
         textTheme: TextTheme(
           caption: TextStyle(
@@ -113,9 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             DrawerHeader(
               child: Image.asset("images/drawer.png"),
-              decoration: BoxDecoration(color: Colors.white),
             ),
-            _buildListTileMenu(context, 'Chile', "CLP"),
+            _buildListTileMenu(context, 'Chile', "CHI"),
             _buildListTileMenu(context, 'Colombia', "COP"),
             _buildListTileMenu(context, 'France', "FRA"),
             _buildListTileMenu(context, 'Georgia', "GEO"),
@@ -227,28 +226,28 @@ class _MyHomePageState extends State<MyHomePage> {
         rtv.add(buildListTileCaption("Touch the number!"));
         rtv.add(_buildListTileNumber("drawer", "872-406-581", "+27"));
         break;
-      case "":
+      case "SPA":
         rtv.add(_buildListTileHomeContent(context, 'Spain', "HOME", "+34"));
         rtv.add(buildListTileCaption("Touch the number!"));
         rtv.add(_buildListTileNumber("drawer", "622-446-931", "+34"));
         break;
-      case "":
+      case "CH":
         rtv.add(
             _buildListTileHomeContent(context, 'Switzerland', "HOME", "+41"));
         rtv.add(buildListTileCaption("Touch the number!"));
         rtv.add(_buildListTileNumber("drawer", "798-071-464", "+41"));
         break;
-      case "":
+      case "UK":
         rtv.add(_buildListTileHomeContent(context, 'UK', "HOME", "+44"));
         rtv.add(buildListTileCaption("Touch the number!"));
         rtv.add(_buildListTileNumber("drawer", "741-212-55-22", "+44"));
         break;
-      case "":
+      case "USA":
         rtv.add(_buildListTileHomeContent(context, 'USA', "HOME", "+1"));
         rtv.add(buildListTileCaption("Touch the number!"));
         rtv.add(_buildListTileNumber("drawer", "360-224-57-86", "+1"));
         break;
-      case "":
+      case "VEN":
         rtv.add(_buildListTileHomeContent(context, 'Venezuela', "HOME", "+58"));
         rtv.add(buildListTileCaption("Touch the number!"));
         rtv.add(_buildListTileNumber("drawer", "11-23-58", "+58"));
