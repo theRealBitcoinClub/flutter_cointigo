@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 const _kFontFam = 'MyFlutterApp';
 
@@ -27,13 +28,16 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         textTheme: TextTheme(
           caption: TextStyle(
-              fontSize: 42.0, fontWeight: FontWeight.w400, color: TEXT_COLOR),
+              fontSize: 42.0, fontWeight: FontWeight.w300, color: TEXT_COLOR),
           headline: TextStyle(
-              fontSize: 36.0, fontWeight: FontWeight.w400, color: TEXT_COLOR),
+              fontSize: 34.0, fontWeight: FontWeight.w300, color: TEXT_COLOR),
           button: TextStyle(
-              fontSize: 28.0, fontWeight: FontWeight.w300, color: TEXT_COLOR),
+              fontSize: 32.0, fontWeight: FontWeight.w300, color: TEXT_COLOR),
           title: TextStyle(
-              fontSize: 24.0, fontWeight: FontWeight.w500, color: TEXT_COLOR),
+              fontSize: 24.0, fontWeight: FontWeight.w300, color: TEXT_COLOR),
+          display1: TextStyle(
+              fontSize: 32.0, fontWeight: FontWeight.w200, color: TEXT_COLOR),
+          display2: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w200),
         ),
       ),
       home: MyHomePage(title: 'CoinTigo'),
@@ -91,8 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text('Instagram'),
           ),
         ],
-        fixedColor: Colors.grey[400],
-        selectedFontSize: 12.0,
+        fixedColor: Colors.grey[100],
+        iconSize: 28,
+        selectedLabelStyle: Theme.of(context).textTheme.display2,
+        unselectedLabelStyle: Theme.of(context).textTheme.display2,
         onTap: (index) {
           switch (index) {
             case 0:
@@ -138,10 +144,10 @@ class _MyHomePageState extends State<MyHomePage> {
   ListTile _buildListTileHomeContent(
       BuildContext context, String text, String id, String countryCode) {
     return ListTile(
-      contentPadding: EdgeInsets.fromLTRB(48.0, 32.0, 48.0, 32.0),
+      contentPadding: EdgeInsets.all(32.0),
       trailing: Text(
         countryCode,
-        style: Theme.of(context).textTheme.title,
+        style: Theme.of(context).textTheme.display1,
       ),
       title: _buildHomeItemText(context, text),
       onTap: () {
